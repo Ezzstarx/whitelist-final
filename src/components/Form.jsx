@@ -122,7 +122,7 @@ export default function Form({ onClose, onOpenWallet }) {
           xusername: xusername,
           country: country,
           wallet: address,
-          referredBy: referralCode || ''
+          referral: referralCode || ''
         }),
       });
 
@@ -340,4 +340,5 @@ export default function Form({ onClose, onOpenWallet }) {
   );
 
 }
+
 
