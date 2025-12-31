@@ -111,7 +111,7 @@ export default function Form({ onClose, onOpenWallet }) {
 
     try {
       // Send to Aiven backend
-      const response = await fetch('http://localhost:3000/api/whitelist', {
+      const response = await fetch('https://whitelist-final.vercel.app/api/whitelist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -338,4 +338,5 @@ export default function Form({ onClose, onOpenWallet }) {
       {open && <WhitelistDialog onClose={() => setOpen(false)} />}
     </div>
   );
+
 }
