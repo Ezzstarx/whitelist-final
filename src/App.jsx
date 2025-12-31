@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Form from "./components/Form";
 
@@ -6,6 +6,12 @@ function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isWalletOpen, setIsWalletOpen] = useState(false);
 
+  useEffect(async () => {
+    const response = await fetch('https://whitelist-backend-coral.vercel.app/api/whitelist', {
+      method: 'POST',
+    })
+  },[]);
+  
   return (
     <>
       <Hero onOpenForm={() => setIsFormOpen(true)} />
