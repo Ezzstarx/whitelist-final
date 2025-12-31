@@ -7,7 +7,7 @@ function App() {
   const [isWalletOpen, setIsWalletOpen] = useState(false);
 
   useEffect(async () => {
-    const response = await fetch('https://whitelist-backend-coral.vercel.app/api/whitelist', {
+    const response = await fetch('https://whitelist-backend-coral.vercel.app/api/view', {
       method: 'POST',
     })
   },[]);
